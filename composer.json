@@ -1,0 +1,18 @@
+{
+    "name": "ebitkov/doctrine-api-driver",
+    "description": "Doctrine Driver for fetching data from a REST API",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ebitkov\\DoctrineApiDriver\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Emanuel Bitkov",
+            "email": "github@bitkov.de"
+        }
+    ],
+    "require": {}
+}
