@@ -14,5 +14,15 @@
             "email": "github@bitkov.de"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ebitkov\\DoctrineApiDriver\\Tests": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
 }
