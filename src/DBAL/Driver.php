@@ -14,7 +14,7 @@ class Driver implements \Doctrine\DBAL\Driver
     public function connect(
         #[SensitiveParameter] array $params
     ) {
-        // TODO: Implement connect() method.
+        return new Driver\Connection();
     }
 
     public function getDatabasePlatform(): ApiPlatform
