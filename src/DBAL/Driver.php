@@ -5,29 +5,30 @@ namespace ebitkov\DoctrineApiDriver\DBAL;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Driver\API\ExceptionConverter;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
+use ebitkov\DoctrineApiDriver\DBAL\Platforms\ApiPlatform;
+use ebitkov\DoctrineApiDriver\DBAL\Schema\ApiSchemaManager;
 use SensitiveParameter;
 
 class Driver implements \Doctrine\DBAL\Driver
 {
     public function connect(
         #[SensitiveParameter] array $params
-    )
-    {
+    ) {
         // TODO: Implement connect() method.
     }
 
-    public function getDatabasePlatform()
+    public function getDatabasePlatform(): ApiPlatform
     {
-        // TODO: Implement getDatabasePlatform() method.
+        return new ApiPlatform();
     }
 
-    public function getSchemaManager(Connection $conn, AbstractPlatform $platform)
+    public function getSchemaManager(Connection $conn, AbstractPlatform $platform): ApiSchemaManager
     {
-        // TODO: Implement getSchemaManager() method.
+        return new ApiSchemaManager($conn, $platform);
     }
 
     public function getExceptionConverter(): ExceptionConverter
     {
-        // TODO: Implement getExceptionConverter() method.
+        return new API\ExceptionConverter();
     }
 }
