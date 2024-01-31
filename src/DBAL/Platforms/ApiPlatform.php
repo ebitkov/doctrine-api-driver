@@ -48,7 +48,7 @@ class ApiPlatform extends AbstractPlatform
 
     public function getName()
     {
-        // TODO: Implement getName() method.
+        return 'api';
     }
 
     public function getCurrentDatabaseExpression(): string

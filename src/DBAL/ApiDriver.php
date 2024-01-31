@@ -9,7 +9,7 @@ use ebitkov\DoctrineApiDriver\DBAL\Platforms\ApiPlatform;
 use ebitkov\DoctrineApiDriver\DBAL\Schema\ApiSchemaManager;
 use SensitiveParameter;
 
-class Driver implements \Doctrine\DBAL\Driver
+class ApiDriver implements \Doctrine\DBAL\Driver
 {
     public function connect(
         #[SensitiveParameter] array $params

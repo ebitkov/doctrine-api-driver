@@ -14,7 +14,7 @@ class DriverTest extends AbstractDriverTestCase
 {
     protected function createDriver(): Driver
     {
-        return new \ebitkov\DoctrineApiDriver\DBAL\Driver();
+        return new \ebitkov\DoctrineApiDriver\DBAL\ApiDriver();
     }
 
     protected function createSchemaManager(Connection $connection): AbstractSchemaManager
